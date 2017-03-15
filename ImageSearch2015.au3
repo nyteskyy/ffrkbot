@@ -9,7 +9,7 @@ If Not FileExists("ImageSearchDLLx64.dll") Then FileInstall("ImageSearchDLLx64.d
 If Not FileExists("msvcr110d.dll") Then FileInstall("msvcr110d.dll", "msvcr110d.dll", 1);Microsoft Visual C++ Redistributable dll x64
 If Not FileExists("msvcr110.dll") Then FileInstall("msvcr110.dll", "msvcr110.dll", 1);Microsoft Visual C++ Redistributable dll x32
 #EndRegion
-
+#RequireAdmin
 Local $h_ImageSearchDLL = -1; Will become Handle returned by DllOpen() that will be referenced in the _ImageSearchRegion() function
 
 #Region TESTING/Example

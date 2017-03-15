@@ -10,4 +10,5 @@
 
 ; Script Start - Add your code below here
 
-$mm_play =
+$mm_play = "images\mm_play.PNG"
+$ffrk_apk = "images\ffrk_apk.PNG"
