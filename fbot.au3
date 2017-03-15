@@ -10,20 +10,23 @@
 #include <ImageSearch2015.au3>
 #include <scripts\FbotImageVariables.au3>
 
+ConsoleWrite ( "data" )
+ConsoleWrite('! = Red' & @CRLF)
+
 Func searchAndPeck($imgToSearchFor)
-    
-    Local $mouseX = 0
-    Local $mouseY = 0
+
+    Local $mouseX1 = 0
+    Local $mouseY1 = 0
     Local $result
 
     Do ; TODO: Prevent infinite loop... not sure how, though
-    
+
         $result = _ImageSearch($imgToSearchFor,1,$mouseX1,$mouseY1,0,0)
         ;_ImageSearch($findImage, $resultPosition, ByRef $x, ByRef $y, $tolerance, $transparancy = 0)
-        
+
         ConsoleWrite($result)
-    until $result = 1; 
-    
+    until $result = 1;
+
     MouseMove($mouseX1,$mouseY1,50)
     MouseClick("left")
 EndFunc
