@@ -10,7 +10,28 @@
 #include <ImageSearch2015.au3>
 #include <scripts\FbotImageVariables.au3>
 
-#TODO: write function that takes image to search for as a parameter, and it will automatically find and click it
+Func searchAndPeck($imgToSearchFor)
+    
+    Local $mouseX = 0
+    Local $mouseY = 0
+    Local $result
+
+    Do ; TODO: Prevent infinite loop... not sure how, though
+    
+        $result = _ImageSearch($imgToSearchFor,1,$mouseX1,$mouseY1,0,0)
+        ;_ImageSearch($findImage, $resultPosition, ByRef $x, ByRef $y, $tolerance, $transparancy = 0)
+        
+        ConsoleWrite($result)
+    until $result = 1; 
+    
+    MouseMove($mouseX1,$mouseY1,50)
+    MouseClick("left")
+EndFunc
+
+searchAndPeck($ffrk_apk) ; First start the app
+searchAndPeck($mm_play) ; Then press play
+
+#cs
 
 $x1=0
 $y1=0
@@ -28,3 +49,5 @@ if $result=1 Then
 Else
    MsgBox(0,"MSG","End")
 EndIf
+
+#ce
