@@ -1,7 +1,7 @@
 #cs ----------------------------------------------------------------------------
 
  AutoIt Version: 3.3.14.2
- Author:         Chase McNitt
+ Author:         nyteskyy + tread
 
  Script Function:
 	Final Fantasy Record Keeper bot
@@ -9,6 +9,8 @@
 #ce ----------------------------------------------------------------------------
 #include <ImageSearch2015.au3>
 #include <scripts\FbotImageVariables.au3>
+
+#TODO: write function that takes image to search for as a parameter, and it will automatically find and click it
 
 $x1=0
 $y1=0
