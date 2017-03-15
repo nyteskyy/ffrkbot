@@ -10,4 +10,4 @@
 
 ; Script Start - Add your code below here
 
-$ScriptDir="/images
+$ScriptDir="/images"
